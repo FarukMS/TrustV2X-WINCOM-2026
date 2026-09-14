@@ -1,16 +1,30 @@
-# TrustV2X WINCOM 2026 Project
+# TrustV2X WINCOM 2026
 
-Paper Title:
-TrustV2X: An Explainable Hybrid Deep Learning Framework for Misbehavior Detection in C-ITS Safety Messaging Using SUMO-Based Validation
+This repository contains the reproducibility package for the paper:
 
-Project Purpose:
-This project implements a TrustV2X framework for C-ITS/V2X misbehavior detection using SUMO-generated CAM-like messages, attack injection, ML/DL classification, trust scoring, and explainability.
+**TrustV2X: Explainable Hybrid Learning for Trust-Aware C-ITS/V2X Safety-Message Misbehaviour Detection**
 
-Main Components:
-1. SUMO-based CAM generation
-2. Attack injection
-3. ML model training
-4. Deep learning model training
-5. TrustV2X scoring
-6. SHAP/LIME explainability
-7. Results for WINCOM 2026 paper
+The project investigates trust-aware misbehaviour detection for Cooperative Intelligent Transport Systems (C-ITS) and V2X safety messages. TrustV2X combines machine-learning detection with plausibility-aware and rule-based trust scoring to support explainable message-level decision making at the RSU/edge layer.
+
+---
+
+## Repository Contents
+
+```text
+TrustV2X_WINCOM_2026/
+│
+├── scripts/                 # Dataset generation, attack injection, ML/DL training, validation, trust scoring and explainability
+├── sumo/                    # SUMO simulation networks, routes and configuration files
+├── paper/                   # Paper draft, final PDF and paper figures
+├── results/
+│   ├── final_tables/        # Final tables used for reporting
+│   ├── final_figures/       # Final selected figures used for reporting
+│   ├── final_summary/       # Final experimental summaries
+│   ├── tables/              # Controlled SUMO experiment tables
+│   ├── veremi/              # VeReMi Extension ML results and preprocessing diagnostics
+│   └── veremi_dl/           # VeReMi Extension DL result tables
+│
+├── requirements.txt         # Python package list
+├── environment_info.txt     # Environment and library information
+├── .gitignore
+└── README.md
