@@ -48,3 +48,10 @@ trips.trips.xml
 
 # Possible duplicate/shared paper folder
 Shared Paper/
+
+
+# Intermediate/generated figure folders not needed in GitHub package
+figures/
+results/figures/
+results/veremi/figures/
+results/veremi_dl/figures/
