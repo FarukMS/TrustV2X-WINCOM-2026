@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <input>
+        <net-file value="C:\Users\mfsul\Downloads\TrustV2X_WINCOM_2026\sumo\network\trustv2x_grid.net.xml"/>
+        <route-files value="C:\Users\mfsul\Downloads\TrustV2X_WINCOM_2026\sumo\routes\trustv2x_routes.rou.xml"/>
+        <additional-files value="C:\Users\mfsul\Downloads\TrustV2X_WINCOM_2026\sumo\visual_4x4_cits_demo\additional\trustv2x_4x4_cits_visual.add.xml"/>
+    </input>
+
+    <time>
+        <begin value="0"/>
+        <end value="670"/>
+        <step-length value="1"/>
+    </time>
+
+    <processing>
+        <time-to-teleport value="-1"/>
+        <collision.action value="warn"/>
+    </processing>
+
+    <gui_only>
+        <start value="true"/>
+    </gui_only>
+
+    <report>
+        <verbose value="true"/>
+        <no-step-log value="true"/>
+    </report>
+
+</configuration>

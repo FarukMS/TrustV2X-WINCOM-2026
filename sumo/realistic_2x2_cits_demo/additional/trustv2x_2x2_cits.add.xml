@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<additional>
+
+    <!-- ===================================================== -->
+    <!-- TrustV2X 2x2 C-ITS visual environment                 -->
+    <!-- ===================================================== -->
+
+    <poly id="RSU_1_COMMUNICATION_RANGE" type="RSU communication range" color="0,90,255,45" fill="true" layer="0" shape="82.00,50.00 81.88,52.79 81.51,55.56 80.91,58.28 80.07,60.94 79.00,63.52 77.71,66.00 76.21,68.35 74.51,70.57 72.63,72.63 70.57,74.51 68.35,76.21 66.00,77.71 63.52,79.00 60.94,80.07 58.28,80.91 55.56,81.51 52.79,81.88 50.00,82.00 47.21,81.88 44.44,81.51 41.72,80.91 39.06,80.07 36.48,79.00 34.00,77.71 31.65,76.21 29.43,74.51 27.37,72.63 25.49,70.57 23.79,68.35 22.29,66.00 21.00,63.52 19.93,60.94 19.09,58.28 18.49,55.56 18.12,52.79 18.00,50.00 18.12,47.21 18.49,44.44 19.09,41.72 19.93,39.06 21.00,36.48 22.29,34.00 23.79,31.65 25.49,29.43 27.37,27.37 29.43,25.49 31.65,23.79 34.00,22.29 36.48,21.00 39.06,19.93 41.72,19.09 44.44,18.49 47.21,18.12 50.00,18.00 52.79,18.12 55.56,18.49 58.28,19.09 60.94,19.93 63.52,21.00 66.00,22.29 68.35,23.79 70.57,25.49 72.63,27.37 74.51,29.43 76.21,31.65 77.71,34.00 79.00,36.48 80.07,39.06 80.91,41.72 81.51,44.44 81.88,47.21"/>
+
+    <poi id="RSU_1" type="RSU-1" color="0,80,255" x="50" y="50" layer="20"/>
+    <poi id="MEC_TRUSTV2X_EDGE" type="MEC / TrustV2X Edge" color="160,0,255" x="62" y="62" layer="20"/>
+    <poi id="CITS_CONTROL_CENTRE" type="C-ITS Control Centre" color="255,140,0" x="35" y="68" layer="20"/>
+
+    <poi id="CAM_ACTIVE" type="CAM Broadcast Zone" color="0,180,255" x="42" y="40" layer="20"/>
+    <poi id="DENM_WARNING" type="DENM Hazard Warning" color="255,0,0" x="82" y="54" layer="20"/>
+
+    <poi id="TRUSTV2X_ACCEPT" type="TrustV2X ACCEPT" color="0,220,0" x="30" y="72" layer="20"/>
+    <poi id="TRUSTV2X_FLAG" type="TrustV2X FLAG" color="255,200,0" x="67" y="35" layer="20"/>
+    <poi id="TRUSTV2X_REJECT" type="TrustV2X REJECT" color="255,0,0" x="80" y="35" layer="20"/>
+
+    <poi id="ROAD_HAZARD_OBSTACLE" type="Road Hazard / Obstacle" color="255,0,0" x="76" y="50" layer="20"/>
+    <poly id="ROAD_BLOCKAGE_ZONE" type="road blockage / accident" color="255,0,0,120" fill="true" layer="10" shape="72,47 82,47 82,53 72,53"/>
+    <poly id="OVERHEAD_BRIDGE_DECK" type="Overhead Bridge / Alternative Route" color="140,140,140,90" fill="true" layer="2" shape="0,69 100,69 100,75 0,75"/>
+
+    <poi id="OVERHEAD_BRIDGE_LABEL" type="Overhead Bridge / Alternative Route" color="90,90,90" x="50" y="78" layer="25"/>
+
+    <poi id="PEDESTRIAN_CROSSING_W" type="Pedestrian Crossing" color="255,255,255" x="12" y="50" layer="20"/>
+    <poi id="PEDESTRIAN_CROSSING_E" type="Pedestrian Crossing" color="255,255,255" x="88" y="50" layer="20"/>
+    <poly id="LEGEND_PANEL_BG" type="TrustV2X / C-ITS Legend" color="245,245,245,230" fill="true" layer="100" shape="106,8 148,8 148,96 106,96"/>
+
+    <poi id="LEGEND_TITLE" type="TrustV2X / C-ITS Legend" color="0,0,0" x="127" y="93" layer="111"/>
+    <poly id="LEG_TRUSTED_BOX" type="Trusted Vehicle" color="0,180,0,255" fill="true" layer="110" shape="112,84.4 115.2,84.4 115.2,87.60000000000001 112,87.60000000000001"/>
+    <poi id="LEG_TRUSTED_LABEL" type="Trusted Vehicle" color="0,0,0" x="126" y="86" layer="111"/>
+    <poly id="LEG_BACKGROUND_BOX" type="Background Vehicle" color="160,160,160,255" fill="true" layer="110" shape="112,78.4 115.2,78.4 115.2,81.60000000000001 112,81.60000000000001"/>
+    <poi id="LEG_BACKGROUND_LABEL" type="Background Vehicle" color="0,0,0" x="126" y="80" layer="111"/>
+    <poly id="LEG_BRIDGE_BOX" type="Bridge / Bypass Vehicle" color="190,190,210,255" fill="true" layer="110" shape="112,72.4 115.2,72.4 115.2,75.60000000000001 112,75.60000000000001"/>
+    <poi id="LEG_BRIDGE_LABEL" type="Bridge / Bypass Vehicle" color="0,0,0" x="126" y="74" layer="111"/>
+    <poly id="LEG_EMERGENCY_BOX" type="Emergency / Ambulance" color="0,220,255,255" fill="true" layer="110" shape="112,66.4 115.2,66.4 115.2,69.60000000000001 112,69.60000000000001"/>
+    <poi id="LEG_EMERGENCY_LABEL" type="Emergency / Ambulance" color="0,0,0" x="126" y="68" layer="111"/>
+    <poly id="LEG_FLAGGED_BOX" type="Suspicious / Flagged" color="255,200,0,255" fill="true" layer="110" shape="112,60.4 115.2,60.4 115.2,63.6 112,63.6"/>
+    <poi id="LEG_FLAGGED_LABEL" type="Suspicious / Flagged" color="0,0,0" x="126" y="62" layer="111"/>
+    <poly id="LEG_MALICIOUS_BOX" type="Malicious / Rejected" color="255,0,0,255" fill="true" layer="110" shape="112,54.4 115.2,54.4 115.2,57.6 112,57.6"/>
+    <poi id="LEG_MALICIOUS_LABEL" type="Malicious / Rejected" color="0,0,0" x="126" y="56" layer="111"/>
+    <poly id="LEG_RSU_BOX" type="RSU" color="0,80,255,255" fill="true" layer="110" shape="112,48.4 115.2,48.4 115.2,51.6 112,51.6"/>
+    <poi id="LEG_RSU_LABEL" type="RSU" color="0,0,0" x="126" y="50" layer="111"/>
+    <poly id="LEG_MEC_BOX" type="MEC / TrustV2X Edge" color="160,0,255,255" fill="true" layer="110" shape="112,42.4 115.2,42.4 115.2,45.6 112,45.6"/>
+    <poi id="LEG_MEC_LABEL" type="MEC / TrustV2X Edge" color="0,0,0" x="126" y="44" layer="111"/>
+    <poly id="LEG_CONTROL_BOX" type="C-ITS Control Centre" color="255,140,0,255" fill="true" layer="110" shape="112,36.4 115.2,36.4 115.2,39.6 112,39.6"/>
+    <poi id="LEG_CONTROL_LABEL" type="C-ITS Control Centre" color="0,0,0" x="126" y="38" layer="111"/>
+    <poly id="LEG_CAM_BOX" type="CAM Broadcast" color="0,180,255,255" fill="true" layer="110" shape="112,30.4 115.2,30.4 115.2,33.6 112,33.6"/>
+    <poi id="LEG_CAM_LABEL" type="CAM Broadcast" color="0,0,0" x="126" y="32" layer="111"/>
+    <poly id="LEG_DENM_BOX" type="DENM Hazard Warning" color="255,0,0,255" fill="true" layer="110" shape="112,24.4 115.2,24.4 115.2,27.599999999999998 112,27.599999999999998"/>
+    <poi id="LEG_DENM_LABEL" type="DENM Hazard Warning" color="0,0,0" x="126" y="26" layer="111"/>
+    <poly id="LEG_BLOCKAGE_BOX" type="Road Blockage / Obstacle" color="200,0,0,255" fill="true" layer="110" shape="112,18.4 115.2,18.4 115.2,21.599999999999998 112,21.599999999999998"/>
+    <poi id="LEG_BLOCKAGE_LABEL" type="Road Blockage / Obstacle" color="0,0,0" x="126" y="20" layer="111"/>
+    <poly id="LEG_RANGE_BOX" type="RSU Communication Range" color="0,90,255,255" fill="true" layer="110" shape="112,12.4 115.2,12.4 115.2,15.600000000000001 112,15.600000000000001"/>
+    <poi id="LEG_RANGE_LABEL" type="RSU Communication Range" color="0,0,0" x="126" y="14" layer="111"/>
+
+</additional>

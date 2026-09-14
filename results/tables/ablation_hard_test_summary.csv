@@ -1,0 +1,7 @@
+accuracy,balanced_accuracy,precision,recall_detection_rate,f1_score,false_alarm_rate,mcc,roc_auc,pr_auc,feature_set,description,numeric_feature_count,categorical_feature_count,total_input_columns_before_encoding,train_size,test_size,training_time_seconds,prediction_time_seconds,avg_latency_ms_per_message
+1.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0,1.0,TrustV2X_No_Rule_Flags,TrustV2X continuous features only. Binary rule flags removed.,19,3,22,30000,10000,40.1603,0.7294,0.07294
+0.9999,0.9998,1.0,0.9997,0.9998,0.0,0.9998,1.0,1.0,TrustV2X_Full,Full TrustV2X enhanced feature set.,30,3,33,30000,10000,28.3458,0.2032,0.02032
+0.9852,0.9805,0.9818,0.9687,0.9752,0.0077,0.9647,0.9992,0.9983,TrustV2X_Hard_No_Timing_No_Rules,Hardest setting: removes timing-heavy features and binary rule flags.,14,3,17,30000,10000,15.1793,0.1479,0.014791
+0.9845,0.9793,0.9817,0.9663,0.974,0.0077,0.963,0.9992,0.9982,TrustV2X_No_Timing_Heavy,Full TrustV2X features except dominant timing-heavy features.,25,3,28,30000,10000,40.4844,0.1849,0.018489
+0.9753,0.9598,0.9964,0.921,0.9572,0.0014,0.9413,0.9947,0.9929,Raw_CAM_With_Timing,"Raw CAM fields plus timestamp, message sequence and inter-arrival time.",10,3,13,30000,10000,1166.9202,0.5712,0.057117
+0.9527,0.9226,0.9941,0.8473,0.9149,0.0021,0.8878,0.954,0.9521,Core_CAM_Only,"Only basic CAM mobility/context fields. No timing artefacts, no plausibility features, no rule flags.",7,3,10,30000,10000,144.5271,1.8188,0.181879

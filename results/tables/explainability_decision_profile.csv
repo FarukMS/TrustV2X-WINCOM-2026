@@ -1,0 +1,5 @@
+label,trustv2x_decision,ml_attack_probability,plausibility_score,plausibility_risk,rule_violation_count,combined_risk_score,trust_score,ml_confidence,samples
+0,ACCEPT,0.0003,0.9213,0.0787,0.2285,0.0211,0.9789,0.9994,6997
+0,FLAG_FOR_VERIFICATION,0.13,0.5459,0.4541,2.6667,0.2593,0.7407,0.7399,3
+1,FLAG_FOR_VERIFICATION,0.8472,0.9728,0.0272,0.25,0.5647,0.4353,0.6943,4
+1,REJECT_ALERT,0.9996,0.8822,0.1178,0.8138,0.7,0.3,0.9993,2996

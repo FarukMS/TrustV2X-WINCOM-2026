@@ -1,0 +1,6 @@
+experiment,validation_setting,feature_set,model_or_layer,accuracy,balanced_accuracy,precision,recall_detection_rate,f1_score,false_alarm_rate,mcc,interpretation
+Controlled SUMO,Random Stratified Holdout,TrustV2X Full,XGBoost / TrustV2X classifier,0.9999,0.9998,1.0,0.9997,0.9998,0.0,0.9998,Near-perfect internal validation on controlled SUMO-generated attacks.
+Controlled SUMO,Unseen Vehicle Split,TrustV2X Full,XGBoost / TrustV2X classifier,0.9996,0.9996,0.9994,0.9994,0.9994,0.0003,0.9991,Strong generalisation across unseen simulated vehicles.
+Controlled SUMO,Time-Based Split,TrustV2X Full,XGBoost / TrustV2X classifier,0.9998,0.9997,1.0,0.9993,0.9997,0.0,0.9995,Stable temporal generalisation under time-based holdout.
+Controlled SUMO,Hard Ablation Test,"TrustV2X Hard: No Timing, No Rule Flags",Ablated TrustV2X classifier,0.9852,,,0.9687,0.9752,0.0077,,Performance remains strong after removing timing-heavy and binary rule features.
+Controlled SUMO,Operational Trust Scoring,TrustV2X No Rule Flags + Trust Score,TrustV2X scoring layer,0.9997,,0.999,1.0,0.9995,0.0004,0.9993,Decision-level scoring achieved full attack detection with very low false alarms.

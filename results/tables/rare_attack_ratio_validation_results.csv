@@ -1,0 +1,4 @@
+accuracy,balanced_accuracy,precision,recall_detection_rate,f1_score,false_alarm_rate,mcc,roc_auc,pr_auc,scenario,test_size,normal_samples,attack_samples,attack_ratio
+0.9999,0.9998,1.0,0.9997,0.9998,0.0,0.9998,1.0,1.0,Current 70/30,10000,7000,3000,0.3
+1.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0,1.0,Low attack 95/5,7368,7000,368,0.0499
+1.0,1.0,1.0,1.0,1.0,0.0,1.0,1.0,1.0,Rare attack 99/1,7070,7000,70,0.0099

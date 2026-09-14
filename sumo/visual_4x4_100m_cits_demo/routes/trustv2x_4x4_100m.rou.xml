@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes>
+
+    <!-- Vehicle types -->
+    <vType id="trusted_car" vClass="passenger" guiShape="passenger" color="0,180,0" accel="2.6" decel="4.5" sigma="0.5" length="5" maxSpeed="10.0"/>
+    <vType id="background_car" vClass="passenger" guiShape="passenger" color="160,160,160" accel="2.4" decel="4.2" sigma="0.6" length="5" maxSpeed="10.0"/>
+
+    <vType id="flagged_car" vClass="passenger" guiShape="passenger" color="255,200,0" accel="2.3" decel="4.1" sigma="0.7" length="5" maxSpeed="9.0"/>
+    <vType id="malicious_car" vClass="passenger" guiShape="passenger" color="255,0,0" accel="3.0" decel="4.5" sigma="0.9" length="5" maxSpeed="11.0"/>
+
+    <vType id="emergency_vehicle" vClass="emergency" guiShape="emergency" color="0,220,255" accel="3.5" decel="5.0" sigma="0.3" length="6" maxSpeed="12.0"/>
+    <vType id="police_vehicle" vClass="emergency" guiShape="passenger" color="0,80,255" accel="3.2" decel="5.0" sigma="0.3" length="5.5" maxSpeed="12.0"/>
+    <vType id="fire_vehicle" vClass="emergency" guiShape="emergency" color="255,80,0" accel="3.0" decel="5.0" sigma="0.3" length="7" maxSpeed="11.0"/>
+
+    <vType id="bus_vehicle" vClass="bus" guiShape="bus" color="80,80,255" accel="1.5" decel="3.5" sigma="0.5" length="10" maxSpeed="8.0"/>
+
+    <route id="we_r0" edges="W0_J00 J00_J10 J10_J20 J20_J30 J30_E0"/>
+    <route id="ew_r0" edges="E0_J30 J30_J20 J20_J10 J10_J00 J00_W0"/>
+    <route id="we_r1" edges="W1_J01 J01_J11 J11_J21 J21_J31 J31_E1"/>
+    <route id="ew_r1" edges="E1_J31 J31_J21 J21_J11 J11_J01 J01_W1"/>
+    <route id="we_r2" edges="W2_J02 J02_J12 J12_J22 J22_J32 J32_E2"/>
+    <route id="ew_r2" edges="E2_J32 J32_J22 J22_J12 J12_J02 J02_W2"/>
+    <route id="we_r3" edges="W3_J03 J03_J13 J13_J23 J23_J33 J33_E3"/>
+    <route id="ew_r3" edges="E3_J33 J33_J23 J23_J13 J13_J03 J03_W3"/>
+    <route id="sn_c0" edges="S0_J00 J00_J01 J01_J02 J02_J03 J03_N0"/>
+    <route id="ns_c0" edges="N0_J03 J03_J02 J02_J01 J01_J00 J00_S0"/>
+    <route id="sn_c1" edges="S1_J10 J10_J11 J11_J12 J12_J13 J13_N1"/>
+    <route id="ns_c1" edges="N1_J13 J13_J12 J12_J11 J11_J10 J10_S1"/>
+    <route id="sn_c2" edges="S2_J20 J20_J21 J21_J22 J22_J23 J23_N2"/>
+    <route id="ns_c2" edges="N2_J23 J23_J22 J22_J21 J21_J20 J20_S2"/>
+    <route id="sn_c3" edges="S3_J30 J30_J31 J31_J32 J32_J33 J33_N3"/>
+    <route id="ns_c3" edges="N3_J33 J33_J32 J32_J31 J31_J30 J30_S3"/>
+
+    <!-- Alternative routes around central incident edge J11_J21 -->
+    <route id="we_r1_north_alt" edges="W1_J01 J01_J02 J02_J12 J12_J22 J22_J32 J32_E2"/>
+    <route id="we_r1_south_alt" edges="W1_J01 J01_J00 J00_J10 J10_J20 J20_J30 J30_E0"/>
+
+    <!-- Priority routes avoiding the central incident area -->
+    <route id="ambulance_priority_alt" edges="S0_J00 J00_J01 J01_J02 J02_J03 J03_N0"/>
+    <route id="police_priority_alt" edges="E3_J33 J33_J23 J23_J13 J13_J03 J03_W3"/>
+    <route id="fire_priority_alt" edges="W0_J00 J00_J10 J10_J20 J20_J30 J30_E0"/>
+
+    <!-- Normal traffic flows -->
+    <flow id="flow_trusted_we_r1" type="trusted_car" route="we_r1" begin="0" end="420" period="6"/>
+    <flow id="flow_trusted_ew_r2" type="trusted_car" route="ew_r2" begin="4" end="420" period="7"/>
+    <flow id="flow_trusted_sn_c1" type="trusted_car" route="sn_c1" begin="8" end="420" period="8"/>
+    <flow id="flow_trusted_ns_c2" type="trusted_car" route="ns_c2" begin="10" end="420" period="8"/>
+
+    <flow id="flow_background_we_r0" type="background_car" route="we_r0" begin="15" end="420" period="10"/>
+    <flow id="flow_background_ew_r3" type="background_car" route="ew_r3" begin="18" end="420" period="11"/>
+    <flow id="flow_background_sn_c0" type="background_car" route="sn_c0" begin="22" end="420" period="12"/>
+    <flow id="flow_background_ns_c3" type="background_car" route="ns_c3" begin="25" end="420" period="12"/>
+
+    <!-- Special C-ITS vehicles -->
+    <vehicle id="ambulance_4x4_01" type="emergency_vehicle" route="ambulance_priority_alt" depart="35" departLane="best"/>
+    <vehicle id="police_4x4_01" type="police_vehicle" route="police_priority_alt" depart="50" departLane="best"/>
+    <vehicle id="fire_4x4_01" type="fire_vehicle" route="fire_priority_alt" depart="65" departLane="best"/>
+    <vehicle id="bus_4x4_01" type="bus_vehicle" route="we_r0" depart="70" departLane="best"/>
+
+    <vehicle id="flagged_vehicle_4x4_01" type="flagged_car" route="ew_r2" depart="90" departLane="best"/>
+    <vehicle id="malicious_vehicle_4x4_01" type="malicious_car" route="we_r1" depart="115" departLane="best"/>
+
+    <!-- Vehicles already using C-ITS alternative guidance -->
+    <vehicle id="rerouted_vehicle_4x4_01" type="trusted_car" route="we_r1_north_alt" depart="145" departLane="best"/>
+    <vehicle id="rerouted_vehicle_4x4_02" type="trusted_car" route="we_r1_south_alt" depart="155" departLane="best"/>
+
+</routes>

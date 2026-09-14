@@ -1,0 +1,13 @@
+feature_set,model,accuracy,precision,recall_detection_rate,f1_score,false_alarm_rate,detection_rate,training_time_seconds,prediction_time_seconds,avg_latency_ms_per_message,confusion_matrix_file
+Raw_CAM_Features,LightGBM,0.9829,0.9866,0.956,0.9711,0.0056,0.956,313.9949,3.0118,0.301181,C:\Users\mfsul\Downloads\TrustV2X_WINCOM_2026\results\figures\cm_lightgbm_raw_cam_features.png
+Raw_CAM_Features,XGBoost,0.9423,0.9988,0.8087,0.8937,0.0004,0.8087,45.1052,0.4675,0.046751,C:\Users\mfsul\Downloads\TrustV2X_WINCOM_2026\results\figures\cm_xgboost_raw_cam_features.png
+Raw_CAM_Features,Random Forest,0.9317,0.9545,0.811,0.8769,0.0166,0.811,52.338,1.2516,0.125155,C:\Users\mfsul\Downloads\TrustV2X_WINCOM_2026\results\figures\cm_random_forest_raw_cam_features.png
+Raw_CAM_Features,Gradient Boosting,0.8872,0.9952,0.627,0.7693,0.0013,0.627,104.0475,0.4509,0.045085,C:\Users\mfsul\Downloads\TrustV2X_WINCOM_2026\results\figures\cm_gradient_boosting_raw_cam_features.png
+Raw_CAM_Features,SVM,0.8213,0.8252,0.513,0.6327,0.0466,0.513,6667.8888,29.251,2.9251,C:\Users\mfsul\Downloads\TrustV2X_WINCOM_2026\results\figures\cm_svm_raw_cam_features.png
+Raw_CAM_Features,Logistic Regression,0.7306,0.564,0.4497,0.5004,0.149,0.4497,2.8021,0.1787,0.017866,C:\Users\mfsul\Downloads\TrustV2X_WINCOM_2026\results\figures\cm_logistic_regression_raw_cam_features.png
+TrustV2X_Enhanced_Features,Gradient Boosting,0.9999,1.0,0.9997,0.9998,0.0,0.9997,304.8547,2.2327,0.223269,C:\Users\mfsul\Downloads\TrustV2X_WINCOM_2026\results\figures\cm_gradient_boosting_trustv2x_enhanced_features.png
+TrustV2X_Enhanced_Features,XGBoost,0.9999,1.0,0.9997,0.9998,0.0,0.9997,56.4021,0.3619,0.036194,C:\Users\mfsul\Downloads\TrustV2X_WINCOM_2026\results\figures\cm_xgboost_trustv2x_enhanced_features.png
+TrustV2X_Enhanced_Features,LightGBM,0.9997,0.9997,0.9993,0.9995,0.0001,0.9993,133.176,1.3652,0.136518,C:\Users\mfsul\Downloads\TrustV2X_WINCOM_2026\results\figures\cm_lightgbm_trustv2x_enhanced_features.png
+TrustV2X_Enhanced_Features,Random Forest,0.9991,0.9987,0.9983,0.9985,0.0006,0.9983,27.7533,2.4498,0.244978,C:\Users\mfsul\Downloads\TrustV2X_WINCOM_2026\results\figures\cm_random_forest_trustv2x_enhanced_features.png
+TrustV2X_Enhanced_Features,Logistic Regression,0.9952,0.9887,0.9953,0.992,0.0049,0.9953,8.9044,0.6734,0.067337,C:\Users\mfsul\Downloads\TrustV2X_WINCOM_2026\results\figures\cm_logistic_regression_trustv2x_enhanced_features.png
+TrustV2X_Enhanced_Features,SVM,0.9848,0.9561,0.995,0.9752,0.0196,0.995,4441.3903,43.5715,4.357154,C:\Users\mfsul\Downloads\TrustV2X_WINCOM_2026\results\figures\cm_svm_trustv2x_enhanced_features.png

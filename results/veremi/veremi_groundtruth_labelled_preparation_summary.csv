@@ -1,0 +1,6 @@
+archive,groundtruth_files,groundtruth_message_id_entries,trace_files,type3_seen,matched_groundtruth,no_groundtruth_match,missing_message_id,records_kept,normal_records,attack_records,token_normal_records,token_attack_records,attack_counts
+ConstPos_0709,2,410724,4068,50000,50000,0,0,50000,36699,13301,36315,13685,"{'normal': 36699, 'constant_position': 13301}"
+ConstSpeed_0709,2,410724,4068,50000,50000,0,0,50000,37426,12574,36315,13685,"{'normal': 37426, 'constant_speed': 12574}"
+DataReplay_0709,2,410724,4068,50000,50000,0,0,50000,40912,9088,36315,13685,"{'normal': 40912, 'replay_attack': 9088}"
+DoSDisruptive_0709,2,647240,4068,50000,50000,0,0,50000,23207,26793,35758,14242,"{'dos_attack': 26793, 'normal': 23207}"
+DoSDisruptiveSybil_0709,2,529676,4068,50000,50000,0,0,50000,29119,20881,37507,12493,"{'dos_sybil_attack': 20881, 'normal': 29119}"

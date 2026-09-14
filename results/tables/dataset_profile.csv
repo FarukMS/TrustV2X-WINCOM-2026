@@ -1,0 +1,2 @@
+total_messages,normal_messages,attack_messages,normal_ratio,attack_ratio,attack_types,features_columns
+40000,28000,12000,0.7,0.3,12,50

@@ -1,0 +1,61 @@
+================================================================================
+TrustV2X VeReMi Nested ZIP Extraction Report
+================================================================================
+Nested ZIP files found: 10
+
+ZIP: data\veremi\extracted\ConstPos_0709\ConstPos_0709\VeReMi_25200_28800_2022-9-11_20.45.32.zip
+TARGET: data\veremi\extracted\ConstPos_0709\ConstPos_0709\VeReMi_25200_28800_2022-9-11_20.45.32_unzipped
+STATUS: extracted
+FILES: 1848
+
+ZIP: data\veremi\extracted\ConstPos_0709\ConstPos_0709\VeReMi_28800_32400_2022-9-11_20.45.32.zip
+TARGET: data\veremi\extracted\ConstPos_0709\ConstPos_0709\VeReMi_28800_32400_2022-9-11_20.45.32_unzipped
+STATUS: extracted
+FILES: 2222
+
+ZIP: data\veremi\extracted\ConstSpeed_0709\ConstSpeed_0709\VeReMi_25200_28800_2022-9-11_20.46.34.zip
+TARGET: data\veremi\extracted\ConstSpeed_0709\ConstSpeed_0709\VeReMi_25200_28800_2022-9-11_20.46.34_unzipped
+STATUS: extracted
+FILES: 1848
+
+ZIP: data\veremi\extracted\ConstSpeed_0709\ConstSpeed_0709\VeReMi_28800_32400_2022-9-11_20.46.34.zip
+TARGET: data\veremi\extracted\ConstSpeed_0709\ConstSpeed_0709\VeReMi_28800_32400_2022-9-11_20.46.34_unzipped
+STATUS: extracted
+FILES: 2222
+
+ZIP: data\veremi\extracted\DataReplay_0709\DataReplay_0709\VeReMi_25200_28800_2022-9-12_2.59.41.zip
+TARGET: data\veremi\extracted\DataReplay_0709\DataReplay_0709\VeReMi_25200_28800_2022-9-12_2.59.41_unzipped
+STATUS: extracted
+FILES: 1848
+
+ZIP: data\veremi\extracted\DataReplay_0709\DataReplay_0709\VeReMi_28800_32400_2022-9-12_2.59.41.zip
+TARGET: data\veremi\extracted\DataReplay_0709\DataReplay_0709\VeReMi_28800_32400_2022-9-12_2.59.41_unzipped
+STATUS: extracted
+FILES: 2222
+
+ZIP: data\veremi\extracted\DoSDisruptive_0709\DoSDisruptive_0709\VeReMi_25200_28800_2022-9-13_21.7.10.zip
+TARGET: data\veremi\extracted\DoSDisruptive_0709\DoSDisruptive_0709\VeReMi_25200_28800_2022-9-13_21.7.10_unzipped
+STATUS: extracted
+FILES: 1848
+
+ZIP: data\veremi\extracted\DoSDisruptive_0709\DoSDisruptive_0709\VeReMi_28800_32400_2022-9-13_21.7.10.zip
+TARGET: data\veremi\extracted\DoSDisruptive_0709\DoSDisruptive_0709\VeReMi_28800_32400_2022-9-13_21.7.10_unzipped
+STATUS: extracted
+FILES: 2222
+
+ZIP: data\veremi\extracted\DoSDisruptiveSybil_0709\DoSDisruptiveSybil_0709\VeReMi_25200_28800_2022-9-13_21.8.24.zip
+TARGET: data\veremi\extracted\DoSDisruptiveSybil_0709\DoSDisruptiveSybil_0709\VeReMi_25200_28800_2022-9-13_21.8.24_unzipped
+STATUS: extracted
+FILES: 1848
+
+ZIP: data\veremi\extracted\DoSDisruptiveSybil_0709\DoSDisruptiveSybil_0709\VeReMi_28800_32400_2022-9-13_21.8.24.zip
+TARGET: data\veremi\extracted\DoSDisruptiveSybil_0709\DoSDisruptiveSybil_0709\VeReMi_28800_32400_2022-9-13_21.8.24_unzipped
+STATUS: extracted
+FILES: 2222
+
+================================================================================
+SUMMARY
+================================================================================
+Extracted: 10
+Skipped: 0
+Failed: 0

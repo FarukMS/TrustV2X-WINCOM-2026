@@ -1,0 +1,50 @@
+# Python environment
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Large VeReMi raw/extracted files
+data/veremi/raw/
+data/veremi/extracted/
+*.zip
+
+# Optional: exclude very large processed files if GitHub rejects them
+# data/veremi/processed/
+
+# Model files
+*.joblib
+*.keras
+*.h5
+results/**/models/
+
+# Backup folders
+results/*backup*/
+results/veremi_physical_label_backup/
+results/veremi_dl_physical_label_backup/
+results/final_tables_physical_label_backup/
+
+# Old paper versions and LaTeX build files
+paper/Previous Version/
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.synctex.gz
+
+# Editor / OS
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Do not push full datasets to GitHub
+data/
+
+# Temporary SUMO file
+trips.trips.xml
+
+# Possible duplicate/shared paper folder
+Shared Paper/

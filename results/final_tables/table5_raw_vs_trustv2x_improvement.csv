@@ -1,0 +1,3 @@
+split,raw_baseline_model,raw_baseline_feature_set,raw_f1,raw_false_alarm_rate,trustv2x_model,trustv2x_feature_set,trustv2x_f1,trustv2x_false_alarm_rate,absolute_f1_improvement,relative_f1_improvement_percent,false_alarm_rate_change
+Random Stratified Holdout,Random Forest,VeReMi_Raw_BSM_Features,0.9269352951011536,0.02688,Random Forest,VeReMi_TrustV2X_No_Rule_Flags,0.9888005973014772,0.0112533333333333,0.0618653022003236,6.674176992426687,-0.015626666666666702
+Vehicle Disjoint Holdout,Random Forest,VeReMi_Raw_BSM_Features,0.6765439746700395,0.675423045930701,XGBoost,VeReMi_TrustV2X_No_Rule_Flags,0.969198320253862,0.0667203867848509,0.29265434558382253,43.25725400578054,-0.6087026591458501

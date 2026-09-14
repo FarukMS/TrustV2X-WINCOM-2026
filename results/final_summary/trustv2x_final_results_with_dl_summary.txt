@@ -1,0 +1,59 @@
+================================================================================
+TrustV2X Final Results Summary with VeReMi DL Integration
+================================================================================
+
+1. Final metric strategy
+--------------------------------------------------------------------------------
+                 metric                       paper_role                                                                                                                                  reason
+               F1-score          Headline ranking metric                                             Balances precision and recall, useful for comparing models under attack-detection settings.
+Recall / detection rate Safety-critical detection metric                                              Measures how many malicious V2X messages are detected; missed attacks are safety-relevant.
+       False alarm rate Operational deployability metric                                Measures how many normal messages are incorrectly flagged; high false alarms reduce practical usability.
+                    MCC                Robustness metric                        Summarises classification quality across all confusion-matrix cells and is more informative than accuracy alone.
+                Latency     Real-time feasibility metric                                                            V2X safety-message processing requires low-latency edge/RSU-level decisions.
+               Accuracy                Supporting metric Reported for completeness, but not used as the main interpretation metric because attack detection and false alarms are more important.
+
+
+2. Selected final VeReMi results
+--------------------------------------------------------------------------------
+                selected_result model_family                    split                   feature_set         model  accuracy  balanced_accuracy  precision  recall_detection_rate  f1_score  false_alarm_rate      mcc  roc_auc   pr_auc  avg_latency_ms_per_message                         paper_use                                                                                                interpretation
+      Best overall VeReMi model           ML Vehicle Disjoint Holdout VeReMi_TrustV2X_No_Rule_Flags       XGBoost  0.963571           0.959318   0.953561               0.985357  0.969198          0.066720 0.925399 0.992626 0.993571                    0.007224    Main external benchmark result                                                Best overall generalisation under vehicle-disjoint validation.
+Best VeReMi deep learning model           DL Vehicle Disjoint Holdout          VeReMi_TrustV2X_Full           MLP  0.960782           0.959930   0.967824               0.964976  0.966398          0.045115 0.919317 0.988986 0.991335                    0.009537         Main DL comparison result                                             Best DL result; competitive with the strongest tree-based models.
+   Best VeReMi raw BSM baseline           ML Vehicle Disjoint Holdout       VeReMi_Raw_BSM_Features Random Forest  0.577567           0.542050   0.609910               0.759524  0.676544          0.675423 0.092842 0.582645 0.666367                    0.053180               Baseline comparison                                     Shows weak generalisation when only raw BSM/CAM-like attributes are used.
+          Best VeReMi MLP model           DL Vehicle Disjoint Holdout          VeReMi_TrustV2X_Full           MLP  0.960782           0.959930   0.967824               0.964976  0.966398          0.045115 0.919317 0.988986 0.991335                    0.009537            Supports DL evaluation                         MLP is the strongest deep learning representative for message-level tabular V2X data.
+       Best VeReMi 1D-CNN model           DL Vehicle Disjoint Holdout       VeReMi_Raw_BSM_Features        1D-CNN  0.487574           0.559719   0.934827               0.132422  0.231982          0.012983 0.213611 0.581444 0.699303                    0.014080 Report as tested but not selected 1D-CNN underperforms under vehicle-disjoint validation because feature columns are not true temporal windows.
+
+
+3. Vehicle-disjoint ML/DL comparison
+--------------------------------------------------------------------------------
+model_family                   feature_set               model  accuracy  precision  recall_detection_rate  f1_score  false_alarm_rate      mcc  avg_latency_ms_per_message
+          ML VeReMi_TrustV2X_No_Rule_Flags             XGBoost  0.963571   0.953561               0.985357  0.969198          0.066720 0.925399                    0.007224
+          ML          VeReMi_TrustV2X_Full             XGBoost  0.962514   0.952971               0.984120  0.968295          0.067526 0.923194                    0.005347
+          ML          VeReMi_TrustV2X_Full            LightGBM  0.960559   0.944770               0.990070  0.966890          0.080473 0.919731                    0.012034
+          ML VeReMi_TrustV2X_No_Rule_Flags            LightGBM  0.960514   0.945291               0.989375  0.966831          0.079613 0.919575                    0.020212
+          DL          VeReMi_TrustV2X_Full                 MLP  0.960782   0.967824               0.964976  0.966398          0.045115 0.919317                    0.009537
+          ML          VeReMi_TrustV2X_Full       Random Forest  0.958874   0.943045               0.989027  0.965489          0.083051 0.916269                    0.018669
+          ML VeReMi_TrustV2X_No_Rule_Flags       Random Forest  0.958559   0.940999               0.990882  0.965297          0.086382 0.915835                    0.029956
+          DL VeReMi_TrustV2X_No_Rule_Flags                 MLP  0.949385   0.939478               0.976285  0.957528          0.088445 0.895975                    0.010285
+          ML          VeReMi_TrustV2X_Full Logistic Regression  0.927096   0.953813               0.919172  0.936172          0.061886 0.852043                    0.001893
+          ML VeReMi_TrustV2X_No_Rule_Flags Logistic Regression  0.925119   0.966256               0.902790  0.933445          0.043836 0.850640                    0.007456
+          ML       VeReMi_Raw_BSM_Features       Random Forest  0.577567   0.609910               0.759524  0.676544          0.675423 0.092842                    0.053180
+          ML       VeReMi_Raw_BSM_Features            LightGBM  0.574601   0.622606               0.682096  0.650995          0.574859 0.110022                    0.060918
+          ML       VeReMi_Raw_BSM_Features             XGBoost  0.546756   0.623787               0.556255  0.588089          0.466452 0.088660                    0.009846
+          ML       VeReMi_Raw_BSM_Features Logistic Regression  0.526170   0.611385               0.508771  0.555377          0.449637 0.058369                    0.003038
+          DL       VeReMi_Raw_BSM_Features                 MLP  0.542843   0.665788               0.437251  0.527845          0.308666 0.130306                    0.015334
+          DL       VeReMi_Raw_BSM_Features              1D-CNN  0.487574   0.934827               0.132422  0.231982          0.012983 0.213611                    0.014080
+          DL VeReMi_TrustV2X_No_Rule_Flags              1D-CNN  0.472871   0.987378               0.099302  0.180455          0.001785 0.204325                    0.016525
+          DL          VeReMi_TrustV2X_Full              1D-CNN  0.432339   0.969754               0.029600  0.057447          0.001298 0.105374                    0.016306
+
+
+4. Paper-ready interpretation
+--------------------------------------------------------------------------------
+The best overall VeReMi vehicle-disjoint result was achieved by XGBoost using VeReMi_TrustV2X_No_Rule_Flags, with accuracy=0.9636, recall=0.9854, F1=0.9692, false alarm rate=0.0667, and MCC=0.9254.
+The strongest deep learning result was obtained by MLP using VeReMi_TrustV2X_Full, with accuracy=0.9608, recall=0.9650, F1=0.9664, false alarm rate=0.0451, and MCC=0.9193. This shows that the MLP is competitive with the strongest tree-based models on the message-level VeReMi benchmark.
+The best raw BSM/CAM-like baseline achieved only F1=0.6765 and FAR=0.6754 under vehicle-disjoint validation. This confirms that raw message attributes alone generalise poorly compared with TrustV2X temporal, mobility and plausibility-aware features.
+The best 1D-CNN result achieved only F1=0.2320 under vehicle-disjoint validation. Therefore, 1D-CNN should be reported as tested but not selected. Its poor generalisation is attributed to the message-level tabular representation, where neighbouring feature columns do not form a true temporal sequence.
+
+
+5. Final recommendation for the paper
+--------------------------------------------------------------------------------
+The paper should prioritise F1-score, recall/detection rate, false alarm rate, MCC and latency. Accuracy should be included in result tables for completeness, but should not be used as the headline interpretation metric. The final selected model should be XGBoost with TrustV2X No Rule Flags. The final selected deep learning model should be MLP with TrustV2X Full. LSTM should be excluded because a fair LSTM experiment requires explicit vehicle-level temporal windows.

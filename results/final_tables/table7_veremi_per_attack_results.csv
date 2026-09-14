@@ -1,0 +1,13 @@
+split,attack_type,samples,normal_samples,attack_samples,detection_rate_for_attack_rows,false_alarm_rate_for_normal_rows
+Random Stratified Holdout,dos_attack,6125,0,6125,0.9841632653061224,
+Random Stratified Holdout,replay_attack,2062,0,2062,0.98545101842871,
+Random Stratified Holdout,dos_sybil_attack,4798,0,4798,0.9856190079199668,
+Random Stratified Holdout,constant_position,2988,0,2988,0.99665327978581,
+Random Stratified Holdout,constant_speed,2777,0,2777,0.9989196975153044,
+Random Stratified Holdout,normal,18750,18750,0,,0.0112533333333333
+Vehicle Disjoint Holdout,dos_sybil_attack,6848,0,6848,0.9780957943925234,
+Vehicle Disjoint Holdout,dos_attack,7909,0,7909,0.9829308382854977,
+Vehicle Disjoint Holdout,replay_attack,2823,0,2823,0.9847679773290824,
+Vehicle Disjoint Holdout,constant_position,4165,0,4165,0.9894357743097238,
+Vehicle Disjoint Holdout,constant_speed,4137,0,4137,0.9983079526226736,
+Vehicle Disjoint Holdout,normal,18615,18615,0,,0.0667203867848509

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodes>
+    <node id="W" x="0" y="50" type="traffic_light"/>
+    <node id="E" x="100" y="50" type="traffic_light"/>
+    <node id="N" x="50" y="100" type="traffic_light"/>
+    <node id="S" x="50" y="0" type="traffic_light"/>
+    <node id="NW" x="0" y="100" type="priority"/>
+    <node id="NE" x="100" y="100" type="priority"/>
+    <node id="SW" x="0" y="0" type="priority"/>
+    <node id="SE" x="100" y="0" type="priority"/>
+    <node id="BW" x="0" y="72" type="priority"/>
+    <node id="BE" x="100" y="72" type="priority"/>
+    <node id="R0" x="60" y="50" type="priority"/>
+    <node id="R1" x="57" y="57" type="priority"/>
+    <node id="R2" x="50" y="60" type="priority"/>
+    <node id="R3" x="43" y="57" type="priority"/>
+    <node id="R4" x="40" y="50" type="priority"/>
+    <node id="R5" x="43" y="43" type="priority"/>
+    <node id="R6" x="50" y="40" type="priority"/>
+    <node id="R7" x="57" y="43" type="priority"/>
+</nodes>

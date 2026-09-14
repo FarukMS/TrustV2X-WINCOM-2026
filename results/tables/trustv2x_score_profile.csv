@@ -1,0 +1,2 @@
+accuracy,balanced_accuracy,precision,recall_detection_rate,f1_score,false_alarm_rate,mcc,true_normal_accept,false_alarm_normal_flagged_or_rejected,missed_attack_accepted,detected_attack_flagged_or_rejected,test_size,mean_trust_score,normal_mean_trust_score,attack_mean_trust_score,normal_mean_ml_attack_probability,attack_mean_ml_attack_probability,accept_threshold,reject_threshold
+0.9997,0.9998,0.999,1.0,0.9995,0.0004,0.9993,6997,3,0,3000,10000,0.7752,0.9788,0.3002,0.0004,0.9994,0.75,0.4

@@ -1,0 +1,57 @@
+================================================================================
+TrustV2X Final Experimental Summary
+================================================================================
+
+1. Dataset profile
+--------------------------------------------------------------------------------
+                             dataset                                            source  total_records  normal_records  attack_records  normal_ratio  attack_ratio  attack_types  feature_columns                                                  purpose
+Controlled SUMO 4x4 TrustV2X Dataset               SUMO-generated C-ITS/V2X simulation          40000           28000           12000        0.7000        0.3000            12               50      Internal controlled validation and ablation testing
+ VeReMi Extension External Benchmark Ground-truth-labelled VeReMi Extension trace data         250000          167363           82637        0.6695        0.3305             5               44 External benchmark validation and generalisation testing
+
+
+2. Controlled SUMO summary
+--------------------------------------------------------------------------------
+       validation_setting                             feature_set                model_or_layer  accuracy  recall_detection_rate  f1_score  false_alarm_rate    mcc
+Random Stratified Holdout                           TrustV2X Full XGBoost / TrustV2X classifier    0.9999                 0.9997    0.9998            0.0000 0.9998
+     Unseen Vehicle Split                           TrustV2X Full XGBoost / TrustV2X classifier    0.9996                 0.9994    0.9994            0.0003 0.9991
+         Time-Based Split                           TrustV2X Full XGBoost / TrustV2X classifier    0.9998                 0.9993    0.9997            0.0000 0.9995
+       Hard Ablation Test TrustV2X Hard: No Timing, No Rule Flags   Ablated TrustV2X classifier    0.9852                 0.9687    0.9752            0.0077    NaN
+Operational Trust Scoring    TrustV2X No Rule Flags + Trust Score        TrustV2X scoring layer    0.9997                 1.0000    0.9995            0.0004 0.9993
+
+
+3. VeReMi external benchmark key results
+--------------------------------------------------------------------------------
+                            result_label                     split                   feature_set         model  accuracy  balanced_accuracy  precision  recall_detection_rate  f1_score  false_alarm_rate      mcc  roc_auc   pr_auc  avg_latency_ms_per_message
+  Best Raw BSM Baseline - Random Holdout Random Stratified Holdout       VeReMi_Raw_BSM_Features Random Forest  0.930080           0.930080   0.970588               0.887040  0.926935          0.026880 0.863365 0.981538 0.984083                    0.098395
+          Best TrustV2X - Random Holdout Random Stratified Holdout VeReMi_TrustV2X_No_Rule_Flags Random Forest  0.988800           0.988800   0.988748               0.988853  0.988801          0.011253 0.977600 0.999133 0.999113                    0.122429
+Best Raw BSM Baseline - Vehicle Disjoint  Vehicle Disjoint Holdout       VeReMi_Raw_BSM_Features Random Forest  0.577567           0.542050   0.609910               0.759524  0.676544          0.675423 0.092842 0.582645 0.666367                    0.053180
+        Best TrustV2X - Vehicle Disjoint  Vehicle Disjoint Holdout VeReMi_TrustV2X_No_Rule_Flags       XGBoost  0.963571           0.959318   0.953561               0.985357  0.969198          0.066720 0.925399 0.992626 0.993571                    0.007224
+
+
+4. Raw baseline vs TrustV2X improvement on VeReMi
+--------------------------------------------------------------------------------
+                    split raw_baseline_model raw_baseline_feature_set   raw_f1  raw_false_alarm_rate trustv2x_model          trustv2x_feature_set  trustv2x_f1  trustv2x_false_alarm_rate  absolute_f1_improvement  relative_f1_improvement_percent  false_alarm_rate_change
+Random Stratified Holdout      Random Forest  VeReMi_Raw_BSM_Features 0.926935              0.026880  Random Forest VeReMi_TrustV2X_No_Rule_Flags     0.988801                   0.011253                 0.061865                         6.674177                -0.015627
+ Vehicle Disjoint Holdout      Random Forest  VeReMi_Raw_BSM_Features 0.676544              0.675423        XGBoost VeReMi_TrustV2X_No_Rule_Flags     0.969198                   0.066720                 0.292654                        43.257254                -0.608703
+
+
+5. Controlled SUMO vs external VeReMi comparison
+--------------------------------------------------------------------------------
+            dataset        validation_setting           best_model_or_layer                             feature_set  accuracy  recall_detection_rate  f1_score  false_alarm_rate      mcc
+Controlled SUMO 4x4 Random Stratified Holdout XGBoost / TrustV2X classifier                           TrustV2X Full  0.999900               0.999700  0.999800          0.000000 0.999800
+Controlled SUMO 4x4      Unseen Vehicle Split XGBoost / TrustV2X classifier                           TrustV2X Full  0.999600               0.999400  0.999400          0.000300 0.999100
+Controlled SUMO 4x4          Time-Based Split XGBoost / TrustV2X classifier                           TrustV2X Full  0.999800               0.999300  0.999700          0.000000 0.999500
+Controlled SUMO 4x4        Hard Ablation Test   Ablated TrustV2X classifier TrustV2X Hard: No Timing, No Rule Flags  0.985200               0.968700  0.975200          0.007700      NaN
+Controlled SUMO 4x4 Operational Trust Scoring        TrustV2X scoring layer    TrustV2X No Rule Flags + Trust Score  0.999700               1.000000  0.999500          0.000400 0.999300
+   VeReMi Extension Random Stratified Holdout                 Random Forest           VeReMi_TrustV2X_No_Rule_Flags  0.988800               0.988853  0.988801          0.011253 0.977600
+   VeReMi Extension  Vehicle Disjoint Holdout                       XGBoost           VeReMi_TrustV2X_No_Rule_Flags  0.963571               0.985357  0.969198          0.066720 0.925399
+
+
+Paper-ready interpretation
+--------------------------------------------------------------------------------
+The controlled SUMO experiment demonstrates the upper-bound performance of TrustV2X under a fully controlled C-ITS/V2X simulation environment. The external VeReMi Extension benchmark provides a more challenging validation setting. The results show that TrustV2X engineered temporal, mobility and plausibility features substantially outperform raw BSM/CAM-like fields, especially under vehicle-disjoint evaluation. This supports the claim that TrustV2X improves misbehavior detection generalisation beyond the internally generated SUMO dataset.
+
+
+Important limitations to state
+--------------------------------------------------------------------------------
+The VeReMi labels were derived by comparing received trace messages with ground-truth physical states using position, speed, acceleration and heading error thresholds. These ground-truth error columns were used only for label construction and audit, not as model input features. The results should therefore be framed as simulation and benchmark-based validation, not direct real-road deployment evidence.

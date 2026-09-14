@@ -1,0 +1,17 @@
+label,attack_type,trustv2x_decision,count
+0,normal,ACCEPT,6997
+0,normal,FLAG_FOR_VERIFICATION,3
+1,dos_flooding,REJECT_ALERT,250
+1,false_position,REJECT_ALERT,243
+1,ghost_vehicle,REJECT_ALERT,253
+1,gradual_position_drift,REJECT_ALERT,262
+1,heading_falsification,FLAG_FOR_VERIFICATION,2
+1,heading_falsification,REJECT_ALERT,253
+1,intermittent_attack,REJECT_ALERT,233
+1,low_speed_spoofing,REJECT_ALERT,261
+1,neighbour_inconsistency,FLAG_FOR_VERIFICATION,2
+1,neighbour_inconsistency,REJECT_ALERT,238
+1,replay_attack,REJECT_ALERT,241
+1,speed_falsification,REJECT_ALERT,237
+1,sudden_jump,REJECT_ALERT,245
+1,sybil_attack,REJECT_ALERT,280

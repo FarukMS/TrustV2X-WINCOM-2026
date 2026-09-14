@@ -1,0 +1,7 @@
+metric,paper_role,reason
+F1-score,Headline ranking metric,"Balances precision and recall, useful for comparing models under attack-detection settings."
+Recall / detection rate,Safety-critical detection metric,Measures how many malicious V2X messages are detected; missed attacks are safety-relevant.
+False alarm rate,Operational deployability metric,Measures how many normal messages are incorrectly flagged; high false alarms reduce practical usability.
+MCC,Robustness metric,Summarises classification quality across all confusion-matrix cells and is more informative than accuracy alone.
+Latency,Real-time feasibility metric,V2X safety-message processing requires low-latency edge/RSU-level decisions.
+Accuracy,Supporting metric,"Reported for completeness, but not used as the main interpretation metric because attack detection and false alarms are more important."

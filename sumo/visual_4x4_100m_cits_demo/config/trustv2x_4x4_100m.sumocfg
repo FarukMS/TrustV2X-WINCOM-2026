@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <input>
+        <net-file value="../network/trustv2x_4x4_100m.net.xml"/>
+        <route-files value="../routes/trustv2x_4x4_100m.rou.xml"/>
+        <additional-files value="../additional/trustv2x_4x4_100m.add.xml"/>
+    </input>
+
+    <time>
+        <begin value="0"/>
+        <end value="420"/>
+        <step-length value="1"/>
+    </time>
+
+    <processing>
+        <time-to-teleport value="-1"/>
+        <collision.action value="warn"/>
+    </processing>
+
+    <report>
+        <verbose value="true"/>
+        <no-step-log value="true"/>
+    </report>
+
+</configuration>

@@ -1,0 +1,8 @@
+dataset,validation_setting,best_model_or_layer,feature_set,accuracy,precision,recall_detection_rate,f1_score,false_alarm_rate,mcc,main_interpretation
+Controlled SUMO 4x4,Random Stratified Holdout,XGBoost / TrustV2X classifier,TrustV2X Full,0.9999,1.0,0.9997,0.9998,0.0,0.9998,Near-perfect internal validation on controlled SUMO-generated attacks.
+Controlled SUMO 4x4,Unseen Vehicle Split,XGBoost / TrustV2X classifier,TrustV2X Full,0.9996,0.9994,0.9994,0.9994,0.0003,0.9991,Strong generalisation across unseen simulated vehicles.
+Controlled SUMO 4x4,Time-Based Split,XGBoost / TrustV2X classifier,TrustV2X Full,0.9998,1.0,0.9993,0.9997,0.0,0.9995,Stable temporal generalisation under time-based holdout.
+Controlled SUMO 4x4,Hard Ablation Test,Ablated TrustV2X classifier,"TrustV2X Hard: No Timing, No Rule Flags",0.9852,,0.9687,0.9752,0.0077,,Performance remains strong after removing timing-heavy and binary rule features.
+Controlled SUMO 4x4,Operational Trust Scoring,TrustV2X scoring layer,TrustV2X No Rule Flags + Trust Score,0.9997,0.999,1.0,0.9995,0.0004,0.9993,Decision-level scoring achieved full attack detection with very low false alarms.
+VeReMi Extension,Random Stratified Holdout,Random Forest,VeReMi_TrustV2X_No_Rule_Flags,0.9888,0.988747866894198,0.9888533333333334,0.9888005973014772,0.0112533333333333,0.9776000055614578,External benchmark validation confirms strong TrustV2X generalisation beyond the controlled SUMO dataset.
+VeReMi Extension,Vehicle Disjoint Holdout,XGBoost,VeReMi_TrustV2X_No_Rule_Flags,0.9635705777917613,0.9535614133482894,0.9853566184993432,0.969198320253862,0.0667203867848509,0.925399075540274,External benchmark validation confirms strong TrustV2X generalisation beyond the controlled SUMO dataset.

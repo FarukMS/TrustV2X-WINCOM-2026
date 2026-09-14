@@ -1,0 +1,3 @@
+dataset,source,total_records,normal_records,attack_records,normal_ratio,attack_ratio,attack_types,feature_columns,purpose
+Controlled SUMO 4x4 TrustV2X Dataset,SUMO-generated C-ITS/V2X simulation,40000,28000,12000,0.7,0.3,12,50,Internal controlled validation and ablation testing
+VeReMi Extension External Benchmark,Ground-truth-labelled VeReMi Extension trace data,250000,167363,82637,0.6695,0.3305,5,44,External benchmark validation and generalisation testing

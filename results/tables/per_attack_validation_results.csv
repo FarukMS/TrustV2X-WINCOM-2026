@@ -1,0 +1,14 @@
+attack_type,samples,detected_as_attack,missed_or_normal,detection_rate,false_alarm_rate,mean_attack_probability
+normal,7000,0,7000,,0.0,0.0004
+dos_flooding,250,250,0,1.0,,0.9991
+false_position,243,243,0,1.0,,0.9996
+ghost_vehicle,253,253,0,1.0,,0.9999
+gradual_position_drift,262,262,0,1.0,,0.9995
+heading_falsification,255,255,0,1.0,,0.998
+intermittent_attack,233,233,0,1.0,,0.9999
+low_speed_spoofing,261,261,0,1.0,,0.9996
+neighbour_inconsistency,240,239,1,0.9958,,0.9956
+replay_attack,241,241,0,1.0,,0.999
+speed_falsification,237,237,0,1.0,,0.9997
+sudden_jump,245,245,0,1.0,,0.999
+sybil_attack,280,280,0,1.0,,0.9999
